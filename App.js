@@ -1,21 +1,14 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {Provider} from 'react-redux';
+import store from './src/store/Store';
+import BottomTab from './src/navigation/BottomTab';
 
 const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Hello Wor</Text>
-      </SafeAreaView>
-    </>
+    <Provider store={store}>
+      <BottomTab />
+    </Provider>
   );
 };
 
